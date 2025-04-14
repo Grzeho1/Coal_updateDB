@@ -1,1 +1,556 @@
-﻿Chyby ze spuÅ¡tÄ›nÃ­ skriptÅ¯ - 03/25/2025 17:59:25
+﻿Chyby ze spusteni skriptu - 04/13/2025 17:49:02
+Skript: 1_hvw_COAL_priceLists.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_priceListsc, Line 6
+Invalid object name 'dbo.TabCisNC'.
+----------------------------------------
+
+Skript: 2_hvw_CoalstavyDO.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_CoalstavyDO, Line 1
+Invalid object name 'CoalstavyDO'.
+----------------------------------------
+
+Skript: 3_hvw_Coal_flags_def.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_flags_def, Line 1
+Invalid object name 'Coal_flags_def'.
+----------------------------------------
+
+Skript: 4_hvw_Coalshop.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coalshop, Line 1
+Invalid object name 'Coalshop'.
+----------------------------------------
+
+Skript: 5_hvw_COAL_ProdLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_ProdLng, Line 1
+Invalid object name 'COAL_ProdLng'.
+----------------------------------------
+
+Skript: 6_hvw_COAL_CategLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_CategLng, Line 1
+Invalid object name 'COAL_CategLng'.
+----------------------------------------
+
+Skript: 7_hvw_Coal_param_value.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_param_value, Line 1
+Invalid object name 'Coal_param_value'.
+----------------------------------------
+
+Skript: 8_hvw_Coal_parametry_def.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_parametry_def, Line 1
+Invalid object name 'Coal_parametry_def'.
+----------------------------------------
+
+Skript: 9_hvw_coal_MI_productStock.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_MI_productStock, Line 17
+Invalid object name 'dbo.TabStavSkladu'.
+----------------------------------------
+
+Skript: 10_hvw_COAL_subscriptions.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_subscriptions, Line 1
+Invalid object name 'COAL_subscriptions'.
+----------------------------------------
+
+Skript: 11_hvw_COAL_fileTypes.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_fileTypes, Line 1
+Invalid object name 'COAL_fileTypes'.
+----------------------------------------
+
+Skript: 15_hvw_COAL_attributesLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_attributesLng, Line 1
+Invalid object name 'COAL_attributesLng'.
+----------------------------------------
+
+Skript: 16_hvw_COAL_AttributesValuesCompanies.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_AttributesValuesCompanies, Line 2
+Invalid object name 'AttributesValuesCompanies'.
+----------------------------------------
+
+Skript: 17_hvw_COAL_attributesValuesLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_attributesValuesLng, Line 1
+Invalid object name 'COAL_attributesValuesLng'.
+----------------------------------------
+
+Skript: 18_hvw_coal_AttributesValuesProducts.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_AttributesValuesProducts, Line 1
+Invalid object name 'coal_AttributesValuesProducts'.
+----------------------------------------
+
+Skript: 19_hvw_COAL_AttributeValueIndex.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_AttributeValueIndex, Line 1
+Invalid object name 'COAL_AttributeValueIndex'.
+----------------------------------------
+
+Skript: 20_hvw_COAL_availabilities.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_availabilities, Line 1
+Invalid object name 'COAL_availabilities'.
+----------------------------------------
+
+Skript: 22_hvw_COAL_categories.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_categories, Line 17
+Invalid object name 'dbo.TabSoz'.
+----------------------------------------
+
+Skript: 23_hvw_COAL_categoryLng_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_categoryLng_mapping, Line 1
+Invalid object name 'COAL_categoryLng_mapping'.
+----------------------------------------
+
+Skript: 24_hvw_COAL_companyTypes.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_companyTypes, Line 5
+Invalid object name 'dbo.TabKategOrg'.
+----------------------------------------
+
+Skript: 25_hvw_COAL_countries.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_countries, Line 1
+Invalid object name 'COAL_countries'.
+----------------------------------------
+
+Skript: 26_hvw_COAL_createCompany_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_createCompany_mapping, Line 1
+Invalid object name 'COAL_createCompany_mapping'.
+----------------------------------------
+
+Skript: 27_hvw_COAL_createCompany_mapping_ext.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_createCompany_mapping_ext, Line 1
+Invalid object name 'COAL_createCompany_mapping_ext'.
+----------------------------------------
+
+Skript: 28_hvw_COAL_createProduct_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_createProduct_mapping, Line 1
+Invalid object name 'COAL_createProduct_mapping'.
+----------------------------------------
+
+Skript: 29_hvw_COAL_createProduct_mapping_ext.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_createProduct_mapping_ext, Line 1
+Invalid object name 'COAL_createProduct_mapping_ext'.
+----------------------------------------
+
+Skript: 30_hvw_Coal_currencies.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_currencies, Line 1
+Invalid object name 'Coal_currencies'.
+----------------------------------------
+
+Skript: 31_hvw_COAL_custom_atributy.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_custom_atributy, Line 4
+Invalid object name 'dbo.coal_custom_atributy'.
+----------------------------------------
+
+Skript: 32_hvw_COAL_dealers.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_dealers, Line 10
+Invalid object name 'dbo.TabCisZam'.
+----------------------------------------
+
+Skript: 33_hvw_coal_deliveries.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_deliveries, Line 19
+Invalid object name 'dbo.hvw_BalikobotZasilky'.
+----------------------------------------
+
+Skript: 34_hvw_COAL_discountAddressees.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_discountAddressees, Line 4
+Invalid object name 'dbo.TabSoz'.
+----------------------------------------
+
+Skript: 35_hvw_COAL_discountConditions.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_discountConditions, Line 8
+Invalid object name 'dbo.TabSoz'.
+----------------------------------------
+
+Skript: 36_hvw_COAL_discounts.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_discounts, Line 7
+Invalid object name 'dbo.TabSoz'.
+----------------------------------------
+
+Skript: 37_hvw_coal_documentItems.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_documentItems, Line 15
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 38_hvw_coal_documents.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_documents, Line 14
+Invalid object name 'dbo.TabDokladyZbozi'.
+----------------------------------------
+
+Skript: 39_hvw_COAL_ean.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_ean, Line 15
+Invalid object name 'dbo.TabBarCodeZbo'.
+----------------------------------------
+
+Skript: 40_hvw_COAL_filesDocuments.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_filesDocuments, Line 4
+Invalid object name 'dbo.COAL_filesDocuments'.
+----------------------------------------
+
+Skript: 41_hvw_Coal_flags_companies_shops.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_flags_companies_shops, Line 1
+Invalid object name 'Coal_flags_companies_shops'.
+----------------------------------------
+
+Skript: 42_hvw_Coal_flags_products.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_flags_products, Line 1
+Invalid object name 'Coal_flags_products'.
+----------------------------------------
+
+Skript: 43_hvw_coal_innerTestview.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_innerTestview, Line 4
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 44_hvw_Coal_jazyk_mutace.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_jazyk_mutace, Line 4
+Invalid object name 'dbo.Coal_jazyk_mutace'.
+----------------------------------------
+
+Skript: 45_hvw_COAL_languages.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_languages, Line 5
+Invalid object name 'dbo.TabJazyky'.
+----------------------------------------
+
+Skript: 46_hvw_COAL_lists.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_lists, Line 4
+Invalid object name 'dbo.TabSoz'.
+----------------------------------------
+
+Skript: 47_hvw_Coal_log_import.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_log_import, Line 1
+Invalid object name 'Coal_log_import'.
+----------------------------------------
+
+Skript: 48_hvw_Coal_log_message.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_log_message, Line 1
+Invalid object name 'Coal_log_message'.
+----------------------------------------
+
+Skript: 49_hvw_COAL_LogCreateCompany.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogCreateCompany, Line 1
+Invalid object name 'COAL_LogCreateCompany'.
+----------------------------------------
+
+Skript: 50_hvw_COAL_LogImportCompany.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogImportCompany, Line 1
+Invalid object name 'COAL_LogImportCompany'.
+----------------------------------------
+
+Skript: 51_hvw_COAL_LogImportOrderHead.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogImportOrderHead, Line 5
+Invalid object name 'dbo.COAL_LogImportOrderHead'.
+----------------------------------------
+
+Skript: 52_hvw_COAL_LogImportOrderItems.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogImportOrderItems, Line 4
+Invalid object name 'dbo.COAL_LogImportOrderItems'.
+----------------------------------------
+
+Skript: 53_hvw_COAL_LogImportOrderItemsDetails.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogImportOrderItemsDetails, Line 1
+Invalid object name 'COAL_LogImportOrderItemsDetails'.
+----------------------------------------
+
+Skript: 54_hvw_COAL_LogPayOrder.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogPayOrder, Line 1
+Invalid object name 'COAL_LogPayOrder'.
+----------------------------------------
+
+Skript: 55_hvw_COAL_logs.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_logs, Line 4
+Invalid object name 'dbo.coal_logs'.
+----------------------------------------
+
+Skript: 56_hvw_COAL_LogUpdateOrderStatus.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_LogUpdateOrderStatus, Line 1
+Invalid object name 'COAL_LogUpdateOrderStatus'.
+----------------------------------------
+
+Skript: 57_hvw_COAL_market.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_market, Line 1
+Invalid object name 'COAL_market'.
+----------------------------------------
+
+Skript: 58_hvw_COAL_measures.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_measures, Line 1
+Invalid object name 'COAL_measures'.
+----------------------------------------
+
+Skript: 59_hvw_COAL_measureUnitId.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_measureUnitId, Line 1
+Invalid object name 'COAL_measureUnitId'.
+----------------------------------------
+
+Skript: 60_hvw_COAL_measureunits.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_measureunits, Line 4
+Invalid object name 'dbo.TabMJ'.
+----------------------------------------
+
+Skript: 61_hvw_COAL_orderHeader_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderHeader_mapping, Line 1
+Invalid object name 'COAL_orderHeader_mapping'.
+----------------------------------------
+
+Skript: 62_hvw_COAL_orderHeader_mapping_ext.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderHeader_mapping_ext, Line 1
+Invalid object name 'COAL_orderHeader_mapping_ext'.
+----------------------------------------
+
+Skript: 63_hvw_Coal_orderItemDetails.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_orderItemDetails, Line 4
+Invalid object name 'dbo.Coal_orderItemDetails'.
+----------------------------------------
+
+Skript: 64_hvw_COAL_orderItems.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderItems, Line 8
+Invalid object name 'dbo.TabDosleObjR02'.
+----------------------------------------
+
+Skript: 65_hvw_COAL_orderProducts_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderProducts_mapping, Line 1
+Invalid object name 'COAL_orderProducts_mapping'.
+----------------------------------------
+
+Skript: 66_hvw_COAL_orderProducts_mapping_ext.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderProducts_mapping_ext, Line 1
+Invalid object name 'COAL_orderProducts_mapping_ext'.
+----------------------------------------
+
+Skript: 67_hvw_COAL_orders.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orders, Line 77
+Invalid object name 'dbo.TabDosleObjH02'.
+----------------------------------------
+
+Skript: 68_hvw_COAL_paramsLng_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_paramsLng_mapping, Line 1
+Invalid object name 'COAL_paramsLng_mapping'.
+----------------------------------------
+
+Skript: 69_hvw_COAL_paramValueLng_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_paramValueLng_mapping, Line 1
+Invalid object name 'COAL_paramValueLng_mapping'.
+----------------------------------------
+
+Skript: 70_hvw_COAL_payments.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_payments, Line 5
+Invalid object name 'dbo.TabFormaUhrady'.
+----------------------------------------
+
+Skript: 71_hvw_COAL_paymentsCompanies.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_paymentsCompanies, Line 4
+Invalid object name 'dbo.TabCisOrg'.
+----------------------------------------
+
+Skript: 72_hvw_COAL_payOrder_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_payOrder_mapping, Line 1
+Invalid object name 'COAL_payOrder_mapping'.
+----------------------------------------
+
+Skript: 73_hvw_COAL_PrepocetCen.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_PrepocetCen, Line 10
+Invalid object name 'TabNC'.
+----------------------------------------
+
+Skript: 74_hvw_COAL_pricesCompany.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_pricesCompany, Line 8
+Invalid object name 'dbo.TabNC'.
+----------------------------------------
+
+Skript: 75_hvw_COAL_pricesPriceListQty.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_pricesPriceListQty, Line 7
+Invalid object name 'dbo.TabNC'.
+----------------------------------------
+
+Skript: 76_hvw_COAL_productCategories.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productCategories, Line 11
+Invalid object name 'dbo.TabSozNa'.
+----------------------------------------
+
+Skript: 77_hvw_COAL_ProductCountries.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_ProductCountries, Line 4
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 78_hvw_COAL_products.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_products, Line 15
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 79_hvw_COAL_productsFlags.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productsFlags, Line 13
+Invalid object name 'dbo.Coal_flags_products'.
+----------------------------------------
+
+Skript: 80_hvw_COAL_productsLng_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productsLng_mapping, Line 1
+Invalid object name 'COAL_productsLng_mapping'.
+----------------------------------------
+
+Skript: 81_hvw_COAL_productsRel.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productsRel, Line 9
+Invalid object name 'dbo.hvw_TabDTUalterKK'.
+----------------------------------------
+
+Skript: 82_hvw_COAL_productsStock.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productsStock, Line 10
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 83_hvw_coal_productsUnits.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_productsUnits, Line 11
+Invalid object name 'TabMJZbozi'.
+----------------------------------------
+
+Skript: 84_hvw_COAL_regions.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_regions, Line 4
+Invalid object name 'dbo.TabRegion'.
+----------------------------------------
+
+Skript: 85_hvw_coal_reservationCompany.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_reservationCompany, Line 21
+Invalid object name 'dbo.TabCisOrg'.
+----------------------------------------
+
+Skript: 86_hvw_COAL_SE_Brands.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_SE_Brands, Line 1
+Invalid object name 'Tab_COAL_SE_Brands'.
+----------------------------------------
+
+Skript: 87_hvw_Coal_shoptetProductMap.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_shoptetProductMap, Line 1
+Invalid object name 'Coal_shoptetProductMap'.
+----------------------------------------
+
+Skript: 88_hvw_COAL_size_table.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_size_table, Line 1
+Invalid object name 'COAL_size_table'.
+----------------------------------------
+
+Skript: 89_hvw_COAL_stocks.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_stocks, Line 5
+Invalid object name 'dbo.TabStrom'.
+----------------------------------------
+
+Skript: 90_hvw_Coal_tabkmen_ext_mapping.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coal_tabkmen_ext_mapping, Line 1
+Invalid object name 'Coal_tabkmen_ext_mapping'.
+----------------------------------------
+
+Skript: 91_hvw_COAL_TabKmenZbozi_Alter.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_TabKmenZbozi_Alter, Line 22
+Invalid object name 'TabKmenZbozi'.
+----------------------------------------
+
+Skript: 92_hvw_COAL_transportProducts.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_transportProducts, Line 1
+Invalid object name 'COAL_transportProducts'.
+----------------------------------------
+
+Skript: 93_hvw_COAL_transports.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_transports, Line 5
+Invalid object name 'dbo.TabFormaDopravy'.
+----------------------------------------
+
+Skript: 94_hvw_COAL_unitconversion.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_unitconversion, Line 1
+Invalid object name 'TabMJZbozi'.
+----------------------------------------
+
+Skript: 95_hvw_Coaldopravy.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_Coaldopravy, Line 4
+Invalid object name 'dbo.Coaldopravy'.
+----------------------------------------
+
+Skript: 96_hvw_coalshop_uhrady.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coalshop_uhrady, Line 4
+Invalid object name 'dbo.coalshop_uhrady'.
+----------------------------------------
+
+Skript: 102_et_tabnc_COAL_update_datumZmeny.sql
+Chyba: Msg 8197, Level 16, State 4, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure et_tabnc_COAL_update_datumZmeny, Line 7
+The object 'dbo.TabNC' does not exist or is invalid for this operation.
+----------------------------------------
+
+Skript: 103_et_tabkmenzbozi_COAL_update_datumzmeny.sql
+Chyba: Msg 8197, Level 16, State 4, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure et_tabkmenzbozi_COAL_update_datumzmeny, Line 1
+The object 'dbo.TabKmenZbozi' does not exist or is invalid for this operation.
+----------------------------------------
+
+Skript: 104_et_tabstavskladu_COAL_datumzmeny.sql
+Chyba: Msg 8197, Level 16, State 4, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure et_tabstavskladu_COAL_datumzmeny, Line 6
+The object 'dbo.TabStavSkladu' does not exist or is invalid for this operation.
+----------------------------------------
+
+Skript: 105_et_TabDTUalterKK_COAL_update.sql
+Chyba: Msg 8197, Level 16, State 4, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure et_TabDTUalterKK_COAL_update, Line 1
+The object 'dbo.TabDTUalterKK' does not exist or is invalid for this operation.
+----------------------------------------
+
+Skript: 106_et_TabDosleObjH02_COAL_datumzmeny_splneno.sql
+Chyba: Msg 8197, Level 16, State 4, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure et_TabDosleObjH02_COAL_datumzmeny_splneno, Line 6
+The object 'dbo.TabDosleObjH02' does not exist or is invalid for this operation.
+----------------------------------------
+
+Skript: 107_hvw_COAL_pricesPriceList.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_pricesPriceList, Line 48
+Invalid object name 'dbo.TabNC'.
+----------------------------------------
+
+Skript: 108_hvw_COAL_companies.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_companies, Line 72
+Invalid object name 'dbo.TabCisOrg'.
+----------------------------------------
+
+Skript: 109_hvw_COAL_pricesPriceList-testVAT.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_pricesPriceList-testVAT, Line 30
+Invalid object name 'dbo.TabNC'.
+----------------------------------------
+
+Skript: 110_hvw_COAL_orderStatuses.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_orderStatuses, Line 10
+Invalid object name 'dbo.hvw_CoalstavyDO'.
+----------------------------------------
+
+Skript: 111_hvw_COAL_flags.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_flags, Line 4
+Invalid object name 'dbo.hvw_Coal_flags_def'.
+----------------------------------------
+
+Skript: 112_hvw_COAL_shops.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_shops, Line 4
+Invalid object name 'dbo.hvw_Coalshop'.
+----------------------------------------
+
+Skript: 113_hvw_coal_productsLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_coal_productsLng, Line 4
+Invalid object name 'dbo.hvw_COAL_ProdLng'.
+----------------------------------------
+
+Skript: 114_hvw_COAL_categoriesLng.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_categoriesLng, Line 4
+Invalid object name 'dbo.hvw_COAL_CategLng'.
+----------------------------------------
+
+Skript: 115_hvw_COAL_attributesValues.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_attributesValues, Line 11
+Invalid object name 'dbo.hvw_Coal_param_value'.
+----------------------------------------
+
+Skript: 116_hvw_COAL_attributes.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_attributes, Line 5
+Invalid object name 'dbo.hvw_Coal_parametry_def'.
+----------------------------------------
+
+Skript: 117_hvw_COAL_productsStock2.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_productsStock2, Line 9
+Invalid object name 'dbo.TabKmenZbozi'.
+----------------------------------------
+
+Skript: 118_hvw_COAL_subs.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_subs, Line 4
+Invalid object name 'dbo.hvw_COAL_subscriptions'.
+----------------------------------------
+
+Skript: 119_hvw_COAL_files.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_files, Line 7
+Invalid object name 'dbo.TabDokumVazba'.
+----------------------------------------
+
+Skript: 121_hvw_COAL_listItems.sql
+Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_listItems, Line 5
+Invalid object name 'dbo.hvw_COAL_companies'.
+----------------------------------------
+

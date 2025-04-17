@@ -1,4 +1,4 @@
-﻿Chyby ze spusteni skriptu - 04/13/2025 17:49:02
+﻿Chyby ze spusteni skriptu - 04/14/2025 22:56:51
 Skript: 1_hvw_COAL_priceLists.sql
 Chyba: Msg 208, Level 16, State 1, Server DESKTOP-FUQ15OI\SQLEXPRESS, Procedure hvw_COAL_priceListsc, Line 6
 Invalid object name 'dbo.TabCisNC'.

@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Načtení proměnných z .env souboru
+:: Načtení proměnných z .env
 if not exist "%~dp0config.env" (
     echo [error] Soubor config.env nebyl nalezen!
     pause
@@ -12,7 +12,7 @@ for /f "usebackq tokens=1,2 delims==" %%A in ("%~dp0config.env") do (
     set "%%A=%%B"
 )
 
-:: Aktuální složka
+
 set "repoPath=%~dp0"
 set "repoPath=!repoPath:~0,-1!"
 set "sqlPath=%repoPath%\sql"

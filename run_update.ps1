@@ -21,14 +21,14 @@ function Ensure-ODBCDriver17 {
             Write-Host "Instalace ODBC Driver 17 dokoncena."
         }
     } catch {
-        Write-Host "Chyba pri stahovani nebo instalaci ovladace: $_"
+        Write-Host "Chyba pri stahovani nebo instalaci ovladace: $_" -ForegroundColor Red
         exit 1
     }
 }
 
 $envFile = "$PSScriptRoot\config.env"
 if (-not (Test-Path $envFile)) {
-    Write-Host "ERROR: config.env not found!"
+    Write-Host "ERROR: config.env not found!" -ForegroundColor Red
     exit 1
 }
 
@@ -96,10 +96,10 @@ foreach ($file in $sqlFiles) {
     } else {
         $alreadyExists = $errorMessage -match "Msg 2714"
         if ($alreadyExists) {
-            Write-Host "[WARNING] Script already exists: $fileName"
+            Write-Host "[WARNING] Script already exists: $fileName" -ForegroundColor DarkYellow
             $alreadyExistsCount++
         } else {
-            Write-Host "[ERROR] Failed to run script: $fileName"
+            Write-Host "[ERROR] Failed to run script: $fileName" -ForegroundColor Red
             Write-Host "        Error message:"
             Write-Host "$errorMessage"
 
@@ -123,7 +123,7 @@ if (-not (Test-Path $logFolder)) {
 }
 
 $logPath = Join-Path $logFolder "errors.log"
-"Chyby ze spusteni skriptu - $(Get-Date)" | Out-File -FilePath $logPath -Encoding UTF8
+"Chyby :- $(Get-Date)" | Out-File -FilePath $logPath -Encoding UTF8
 
 Write-Host "\n========================================"
 Write-Host "              Dokonceno                 "
@@ -153,7 +153,7 @@ if ($otherErrorsCount -gt 0) {
         Add-Content -Path $logPath -Value "Chyba: $($err.ErrorMessage)"
         Add-Content -Path $logPath -Value "----------------------------------------`n"
     }
-       Write-Host "\nDetailni log chyb byl ulozen do: $logPath"
+       Write-Host "\nDetailni log chyb ulozen do: $logPath"
 }
 
 Write-Host "Cas behu: $($duration.TotalSeconds) sekund."

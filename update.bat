@@ -19,10 +19,12 @@ set "sqlPath=%repoPath%\sql"
 set "tempClonePath=%repoPath%\__temp_git"
 
 echo [info] Cloning repo...
-git clone https://%GIT_USER%:%GIT_TOKEN%@github.com/%GIT_USER%/sql.git "%tempClonePath%"
+git config --global http.sslVerify false
 
-echo [info] Copying sql files...
-robocopy "%tempClonePath%\db-update\sql" "%sqlPath%" /E /NFL /NDL /NJH /NJS /nc /ns /np
+git clone https://%GIT_USER%:%GIT_TOKEN%@github.com/%GIT_USER%/%GIT_REPO%.git "%tempClonePath%"
+
+echo [info] Copying sql files from %SQL_PATH% ...
+robocopy "%tempClonePath%\%SQL_PATH%" "%sqlPath%" /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 echo [info] Cleaning up temp...
 rmdir /s /q "%tempClonePath%"

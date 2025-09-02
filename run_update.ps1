@@ -43,6 +43,12 @@ Get-Content $envFile | ForEach-Object {
 }
 
 $repoPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+# místo fixní "sql" složky použijeme přímo SQL_PATH z configu
+if (-not $env:SQL_PATH) {
+    Write-Host "ERROR: SQL_PATH není nastavený v config.env!" -ForegroundColor Red
+    exit 1
+}
 $sqlFolder = "$repoPath\sql"
 
 $server = $env:DB_SERVER
@@ -58,7 +64,7 @@ Write-Host "========================================"
 $start = Get-Date
 
 if (-not (Test-Path $sqlFolder)) {
-    Write-Host "ERROR: Folder 'sql' does not exist. Run update.bat first."
+    Write-Host "ERROR: Folder '$sqlFolder' does not exist." -ForegroundColor Red
     exit 1
 }
 
@@ -81,7 +87,7 @@ if ($dbUser -and $dbPassword) {
 
 foreach ($file in $sqlFiles) {
     $fileName = $file.Name
-    Write-Host "\n[INFO] Running script: $fileName"
+    Write-Host "`n[INFO] Running script: $fileName"
 
     $command = "sqlcmd -S `"$server`" -d `"$database`" $auth -i `"$($file.FullName)`""
     $output = & cmd.exe /c $command 2>&1
@@ -125,7 +131,7 @@ if (-not (Test-Path $logFolder)) {
 $logPath = Join-Path $logFolder "errors.log"
 "Chyby :- $(Get-Date)" | Out-File -FilePath $logPath -Encoding UTF8
 
-Write-Host "\n========================================"
+Write-Host "`n========================================"
 Write-Host "              Dokonceno                 "
 Write-Host "========================================"
 Write-Host "Spusteno skriptu celkem: $executedCount"
@@ -139,21 +145,19 @@ if ($executedCount -gt 0) {
     Write-Host "Nebyly spusteny zadne nove skripty."
 }
 
-Write-Host "\n=== Souhrn vysledku ==="
+Write-Host "`n=== Souhrn vysledku ==="
 Write-Host "Uspech: $importedCount"
 Write-Host "Jiz existuje: $alreadyExistsCount"
 Write-Host "Jine chyby: $otherErrorsCount"
 
 if ($otherErrorsCount -gt 0) {
-    Write-Host "\n=== Detaily chyb ==="
- foreach ($err in $otherErrorsDetails) {
-      
-        # Zápis do log souboru
+    Write-Host "`n=== Detaily chyb ==="
+    foreach ($err in $otherErrorsDetails) {
         Add-Content -Path $logPath -Value "Skript: $($err.FileName)"
         Add-Content -Path $logPath -Value "Chyba: $($err.ErrorMessage)"
         Add-Content -Path $logPath -Value "----------------------------------------`n"
     }
-       Write-Host "\nDetailni log chyb ulozen do: $logPath"
+    Write-Host "`nDetailni log chyb ulozen do: $logPath"
 }
 
 Write-Host "Cas behu: $($duration.TotalSeconds) sekund."

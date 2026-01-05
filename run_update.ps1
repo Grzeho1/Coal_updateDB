@@ -52,19 +52,27 @@ $dbPassword = $env:DB_PASSWORD
 
 Ensure-ODBCDriver17
 
-Write-Host "========================================"
-Write-Host "         Starting SQL update            "
-Write-Host "========================================"
+Write-Host "`n" ("=" * 60) -ForegroundColor Cyan
+Write-Host "               SQL DATABASE UPDATE TOOL" -ForegroundColor Cyan
+Write-Host ("=" * 60) -ForegroundColor Cyan
+Write-Host " Server  : " -NoNewline; Write-Host $server -ForegroundColor Yellow
+Write-Host " Database: " -NoNewline; Write-Host $database -ForegroundColor Yellow
+Write-Host ("=" * 60) -ForegroundColor Cyan
 $start = Get-Date
 
 if (-not (Test-Path $sqlFolder)) {
-    Write-Host "ERROR: Folder 'sql' does not exist. Run update.bat first."
+    Write-Host "`n[X] CHYBA: Slozka 'sql' neexistuje. Spustte nejdrive update.bat" -ForegroundColor Red
     exit 1
 }
 
 $sqlFiles = Get-ChildItem -Path $sqlFolder -Filter *.sql |
     Where-Object { $_.Name -match "^\d+" } |
     Sort-Object { [int]($_.Name -replace "^(\d+).*", '$1') }
+
+$totalFiles = $sqlFiles.Count
+Write-Host "`n[i] Nalezeno " -NoNewline
+Write-Host "$totalFiles" -ForegroundColor Cyan -NoNewline
+Write-Host " SQL skriptu k provedeni`n"
 
 $executedCount = 0
 $executedScripts = @()
@@ -79,9 +87,14 @@ if ($dbUser -and $dbPassword) {
     $auth = "-E"
 }
 
+$currentNum = 0
 foreach ($file in $sqlFiles) {
+    $currentNum++
     $fileName = $file.Name
-    Write-Host "\n[INFO] Running script: $fileName"
+    
+    Write-Host ("[{0}/{1}] " -f $currentNum, $totalFiles) -NoNewline -ForegroundColor Gray
+    Write-Host $fileName -NoNewline -ForegroundColor White
+    Write-Host " ... " -NoNewline
 
     $command = "sqlcmd -S `"$server`" -d `"$database`" $auth -i `"$($file.FullName)`""
     $output = & cmd.exe /c $command 2>&1
@@ -91,17 +104,20 @@ foreach ($file in $sqlFiles) {
     $errorMessage = ($output -join "`n")
 
     if ($exitCode -eq 0 -and -not $errorDetected) {
-        Write-Host "[SUCCESS] Script executed successfully."
+        Write-Host "[OK]" -ForegroundColor Green
         $importedCount++
+        $executedScripts += $fileName
+        $executedCount++
     } else {
         $alreadyExists = $errorMessage -match "Msg 2714"
         if ($alreadyExists) {
-            Write-Host "[WARNING] Script already exists: $fileName" -ForegroundColor DarkYellow
+            Write-Host "[EXISTUJE]" -ForegroundColor DarkYellow
             $alreadyExistsCount++
         } else {
-            Write-Host "[ERROR] Failed to run script: $fileName" -ForegroundColor Red
-            Write-Host "        Error message:"
-            Write-Host "$errorMessage"
+            Write-Host "[CHYBA]" -ForegroundColor Red
+            Write-Host "      |_ Error: " -NoNewline -ForegroundColor DarkRed
+            $firstError = ($errorMessage -split "`n" | Where-Object { $_ -match "Msg \d+" } | Select-Object -First 1)
+            Write-Host $firstError -ForegroundColor DarkRed
 
             $otherErrorsDetails += [PSCustomObject]@{
                 FileName = $fileName
@@ -125,35 +141,71 @@ if (-not (Test-Path $logFolder)) {
 $logPath = Join-Path $logFolder "errors.log"
 "Chyby :- $(Get-Date)" | Out-File -FilePath $logPath -Encoding UTF8
 
-Write-Host "\n========================================"
-Write-Host "              Dokonceno                 "
-Write-Host "========================================"
-Write-Host "Spusteno skriptu celkem: $executedCount"
+Write-Host "`n" ("=" * 60) -ForegroundColor Cyan
+Write-Host "                  VYSLEDKY PROVEDENI" -ForegroundColor Cyan
+Write-Host ("=" * 60) -ForegroundColor Cyan
 
-if ($executedCount -gt 0) {
-    Write-Host "Seznam spustenych skriptu:"
-    foreach ($script in $executedScripts) {
-        Write-Host " - $script"
-    }
-} else {
-    Write-Host "Nebyly spusteny zadne nove skripty."
-}
+# Progress bar
+$successRate = if ($totalFiles -gt 0) { [math]::Round(($importedCount / $totalFiles) * 100) } else { 0 }
+$barLength = 40
+$filledLength = [math]::Round(($successRate / 100) * $barLength)
+$bar = ("#" * $filledLength) + ("-" * ($barLength - $filledLength))
+Write-Host " Progress: [" -NoNewline
+Write-Host $bar -NoNewline -ForegroundColor Green
+Write-Host "] $successRate%"
 
-Write-Host "\n=== Souhrn vysledku ==="
-Write-Host "Uspech: $importedCount"
-Write-Host "Jiz existuje: $alreadyExistsCount"
-Write-Host "Jine chyby: $otherErrorsCount"
+Write-Host "`n Celkem skriptu    : " -NoNewline; Write-Host $totalFiles -ForegroundColor White
+Write-Host " Uspesne provedeno : " -NoNewline; Write-Host $importedCount -ForegroundColor Green
+Write-Host " Jiz existuji      : " -NoNewline; Write-Host $alreadyExistsCount -ForegroundColor Yellow
+Write-Host " Chyby             : " -NoNewline; Write-Host $otherErrorsCount -ForegroundColor Red
 
 if ($otherErrorsCount -gt 0) {
-    Write-Host "\n=== Detaily chyb ==="
- foreach ($err in $otherErrorsDetails) {
-      
+    Write-Host "`n" ("=" * 60) -ForegroundColor DarkRed
+    Write-Host "   !!! SKRIPTY K RESENI - NALEZENY CHYBY !!!" -ForegroundColor Red
+    Write-Host ("=" * 60) -ForegroundColor DarkRed
+    Write-Host ""
+    
+    $errNum = 1
+    foreach ($err in $otherErrorsDetails) {
+        Write-Host " [$errNum] " -NoNewline -ForegroundColor Red
+        Write-Host $err.FileName -ForegroundColor Yellow
+        
+        # Extrahování prvního error message
+        $errorLines = $err.ErrorMessage -split "`n"
+        $msgLine = $errorLines | Where-Object { $_ -match "Msg \d+" } | Select-Object -First 1
+        $descLine = $errorLines | Where-Object { $_ -match "Invalid|Cannot|The|Error" -and $_ -notmatch "Msg \d+" } | Select-Object -First 1
+        
+        if ($msgLine) {
+            Write-Host "     Chyba   : " -NoNewline -ForegroundColor Gray
+            Write-Host $msgLine.Trim() -ForegroundColor DarkYellow
+        }
+        if ($descLine) {
+            Write-Host "     Popis   : " -NoNewline -ForegroundColor Gray
+            Write-Host $descLine.Trim() -ForegroundColor White
+        }
+        Write-Host "     Cesta   : " -NoNewline -ForegroundColor Gray
+        Write-Host "$sqlFolder\$($err.FileName)" -ForegroundColor Cyan
+        Write-Host ""
+        
+        $errNum++
+        
         # Zápis do log souboru
         Add-Content -Path $logPath -Value "Skript: $($err.FileName)"
         Add-Content -Path $logPath -Value "Chyba: $($err.ErrorMessage)"
         Add-Content -Path $logPath -Value "----------------------------------------`n"
     }
-       Write-Host "\nDetailni log chyb ulozen do: $logPath"
+    
+    Write-Host ("-" * 60) -ForegroundColor DarkRed
+    Write-Host " [!] AKCE: Prosim zkontrolujte tyto " -NoNewline -ForegroundColor Yellow
+    Write-Host "$otherErrorsCount" -NoNewline -ForegroundColor Red
+    Write-Host " skript(u)" -ForegroundColor Yellow
+    Write-Host " [i] Detailni log: " -NoNewline -ForegroundColor Gray
+    Write-Host $logPath -ForegroundColor Cyan
+    Write-Host ("-" * 60) -ForegroundColor DarkRed
 }
 
-Write-Host "Cas behu: $($duration.TotalSeconds) sekund."
+Write-Host "`n" ("-" * 60) -ForegroundColor Gray
+Write-Host " Cas behu: " -NoNewline
+Write-Host ("{0:N2} sekund" -f $duration.TotalSeconds) -ForegroundColor Magenta
+Write-Host ("=" * 60) -ForegroundColor Cyan
+Write-Host ""

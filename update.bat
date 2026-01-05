@@ -18,11 +18,32 @@ set "repoPath=!repoPath:~0,-1!"
 set "sqlPath=%repoPath%\sql"
 set "tempClonePath=%repoPath%\__temp_git"
 
-echo [info] Cloning repo...
-git clone https://%GIT_USER%:%GIT_TOKEN%@github.com/%GIT_USER%/sql.git "%tempClonePath%"
+echo.
+echo ========================================
+echo   Vyberte SQL slozku:
+echo ========================================
+echo 1) Shoptet_SQL
+echo 2) Univerzal_SQL
+echo ========================================
+set /p choice="Zadejte 1 nebo 2: "
 
-echo [info] Copying sql files...
-robocopy "%tempClonePath%\db-update\sql" "%sqlPath%" /E /NFL /NDL /NJH /NJS /nc /ns /np
+if "%choice%"=="1" (
+    set "sqlFolder=Shoptet_SQL"
+    echo [info] Vybrano: Shoptet_SQL
+) else if "%choice%"=="2" (
+    set "sqlFolder=Univerzal_SQL"
+    echo [info] Vybrano: Univerzal_SQL
+) else (
+    echo [error] Neplatna volba!
+    pause
+    exit /b 1
+)
+
+echo [info] Cloning repo...
+git clone https://%GIT_USER%:%GIT_TOKEN%@github.com/%GIT_USER%/%GIT_REPO%.git "%tempClonePath%"
+
+echo [info] Copying sql files from !sqlFolder!...
+robocopy "%tempClonePath%\sql\!sqlFolder!" "%sqlPath%" /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 echo [info] Cleaning up temp...
 rmdir /s /q "%tempClonePath%"
